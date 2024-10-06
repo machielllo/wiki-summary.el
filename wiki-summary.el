@@ -66,7 +66,7 @@
   (let ((buf (generate-new-buffer "*wiki-summary*")))
     (with-current-buffer buf
       (princ summary buf)
-      (fill-paragraph)
+      (fill-region (point-min) (point-max))
       (goto-char (point-min))
       (text-mode)
       (view-mode))
